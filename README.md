@@ -16,7 +16,7 @@
 | 📚 **Disciplina** | Programação Front-End |
 | 👨‍🏫 **Professor** | José Carlos Flores |
 | 🎓 **Turma** | ESOFT3B |
-| 📅 **Data** | 28 de Maio de 2026 |
+| 📅 **Data** | 17 de junho de 2026 |
 | 📝 **Descritivo** | Exercícios do 1 ao 18 |
 
 ---
