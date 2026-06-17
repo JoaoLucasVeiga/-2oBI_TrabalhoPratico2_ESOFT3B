@@ -1,0 +1,59 @@
+<div class="container">
+  @if (loading) {
+    <p class="mensagem">Carregando...</p>
+  }
+
+  @if (erro) {
+    <p class="mensagem erro">{{ erro }}</p>
+  }
+
+  @if (pokemon) {
+    <a routerLink="/" class="voltar">← Voltar</a>
+
+    <div class="card">
+      <div class="header-pokemon" [style.background]="corDoTipo(pokemon.types[0].type.name)">
+        <span class="numero">#{{ pokemon.id }}</span>
+        <img
+          [src]="pokemon.sprites.other['official-artwork'].front_default"
+          [alt]="pokemon.name"
+        />
+      </div>
+
+      <div class="info">
+        <h2 class="nome">{{ pokemon.name }}</h2>
+
+        <div class="tipos">
+          @for (t of pokemon.types; track t.type.name) {
+            <span class="tipo" [style.background]="corDoTipo(t.type.name)">
+              {{ t.type.name }}
+            </span>
+          }
+        </div>
+
+        <div class="medidas">
+          <div>
+            <span class="label">Altura</span>
+            <span>{{ formatarAltura(pokemon.height) }}</span>
+          </div>
+          <div>
+            <span class="label">Peso</span>
+            <span>{{ formatarPeso(pokemon.weight) }}</span>
+          </div>
+        </div>
+
+        <h3 class="stats-titulo">Estatísticas</h3>
+        <div class="stats">
+          @for (stat of pokemon.stats; track stat.stat.name) {
+            <div class="stat">
+              <span class="stat-nome">{{ stat.stat.name }}</span>
+              <div class="barra-fundo">
+                <div class="barra" [style.width.%]="(stat.base_stat / 255) * 100"></div>
+              </div>
+              <span class="stat-valor">{{ stat.base_stat }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

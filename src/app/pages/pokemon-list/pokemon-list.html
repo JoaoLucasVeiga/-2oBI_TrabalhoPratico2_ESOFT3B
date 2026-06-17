@@ -1,0 +1,21 @@
+<div class="container">
+  @if (loading) {
+    <p class="mensagem">Carregando...</p>
+  }
+
+  @if (erro) {
+    <p class="mensagem erro">{{ erro }}</p>
+  }
+
+  @if (!loading && !erro) {
+    <div class="grid">
+      @for (pokemon of pokemons; track pokemon.id) {
+        <a [routerLink]="['/pokemon', pokemon.name]" class="card">
+          <span class="numero">#{{ pokemon.idFormatado }}</span>
+          <img [src]="pokemon.imagem" [alt]="pokemon.name" />
+          <span class="nome">{{ pokemon.name }}</span>
+        </a>
+      }
+    </div>
+  }
+</div>

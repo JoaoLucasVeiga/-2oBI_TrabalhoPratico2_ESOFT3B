@@ -1,0 +1,141 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.mensagem {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.mensagem.erro {
+  color: #cc0000;
+}
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.voltar:hover {
+  color: #cc0000;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.header-pokemon {
+  padding: 32px;
+  text-align: center;
+  position: relative;
+}
+
+.header-pokemon img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.numero {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+}
+
+.info {
+  padding: 24px;
+}
+
+.nome {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.tipos {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tipo {
+  padding: 4px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.medidas {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.medidas .label {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.stats-titulo {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 120px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-nome {
+  font-size: 13px;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.barra-fundo {
+  background: #eee;
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.barra {
+  background: #cc0000;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.stat-valor {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+}
